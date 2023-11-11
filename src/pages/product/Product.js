@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ferrari from '../../images/ferrari.webp';
+import {Link} from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -145,34 +146,41 @@ const ButtonContainer = styled.div`
 `;
 
 function Product() {
-  return (
-    <Container>
-      <MiniContainer>
-        <Left>
-          <Header>Ferrari 458 Italia 4.5 V8 Gasolina</Header>
-          <ImgContainer>
-            <Img src={ferrari} alt="" />
-          </ImgContainer>
-          <TextContainer>
-            <BigText>ESPECIFICAÇÕES  DO CARRO</BigText>
-            <SmallText>
-              A Ferrari 458 Italia é uma obra-prima de alta performance que combina elegância italiana e poder bruto. Equipada com um motor V8 de 4.5 litros movido a gasolina, esta máquina de precisão oferece uma experiência de condução inigualável. Seu design aerodinâmico, curvas sedutoras e acabamento de luxo fazem dela um ícone do mundo automobilístico. Com a 458 Italia, você não está apenas comprando um carro, está adquirindo um estilo de vida. Viva a paixão pelas pistas com este exemplar de excelência da engenharia italiana.
-            </SmallText>
-          </TextContainer>
-        </Left>
-        <Right>
-          <RightHeader>valor/ detalhes do pagamento</RightHeader>
-          <RightTextContainer>
-            <CarName>Ferrari 458 Italia 4.5 V8 Gasolina</CarName>
-            <CarValue>R$ 2.458.000</CarValue>
-          </RightTextContainer>
-          <ButtonContainer>
-            <button>Comprar</button>
-          </ButtonContainer>
-        </Right>
-      </MiniContainer>
-    </Container>
-  );
+    return (
+        <Container>
+            <MiniContainer>
+                <Left>
+                    <Header>Ferrari 458 Italia 4.5 V8 Gasolina</Header>
+                    <ImgContainer>
+                        <Img src={ferrari} alt=""/>
+                    </ImgContainer>
+                    <TextContainer>
+                        <BigText>ESPECIFICAÇÕES DO CARRO</BigText>
+                        <SmallText>
+                            A Ferrari 458 Italia é uma obra-prima de alta performance que combina elegância italiana e
+                            poder bruto. Equipada com um motor V8 de 4.5 litros movido a gasolina, esta máquina de
+                            precisão oferece uma experiência de condução inigualável. Seu design aerodinâmico, curvas
+                            sedutoras e acabamento de luxo fazem dela um ícone do mundo automobilístico. Com a 458
+                            Italia, você não está apenas comprando um carro, está adquirindo um estilo de vida. Viva a
+                            paixão pelas pistas com este exemplar de excelência da engenharia italiana.
+                        </SmallText>
+                    </TextContainer>
+                </Left>
+                <Right>
+                    <RightHeader>valor/ detalhes do pagamento</RightHeader>
+                    <RightTextContainer>
+                        <CarName>Ferrari 458 Italia 4.5 V8 Gasolina</CarName>
+                        <CarValue>R$ 2.458.000</CarValue>
+                    </RightTextContainer>
+                    <Link to="/product">
+                        <ButtonContainer>
+                            <button>Comprar</button>
+                        </ButtonContainer>
+                    </Link>
+                </Right>
+            </MiniContainer>
+        </Container>
+    );
 }
 
 export default Product;

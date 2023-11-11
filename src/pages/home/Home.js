@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 import ferrari from '../../images/ferrari.webp';
@@ -43,37 +43,37 @@ const CarroNameText = styled.p`
 `;
 
 function Carro(props) {
-  return (
-    <CarroWrapper>
-      <Link to="/product">
-        <CarroImage src={props.imagemSrc} alt={props.nome} />
-        <CarroName>
-          <CarroNameText>{props.nome}</CarroNameText>
-        </CarroName>
-      </Link>
-    </CarroWrapper>
-  );
+    return (
+        <CarroWrapper>
+            <Link to="/product">
+                <CarroImage src={props.imagemSrc} alt={props.nome}/>
+                <CarroName>
+                    <CarroNameText>{props.nome}</CarroNameText>
+                </CarroName>
+            </Link>
+        </CarroWrapper>
+    );
 }
 
 function Home() {
-  const carros = [
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-    { nome: "Ferrari 458", imagemSrc: ferrari },
-  ];
+    const carros = [
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+        {nome: "Ferrari 458", imagemSrc: ferrari},
+    ];
 
-  return (
-    <Grid3x3>
-      {carros.map((carro, index) => (
-        <Carro key={index} nome={carro.nome} imagemSrc={carro.imagemSrc} />
-      ))}
-    </Grid3x3>
-  );
+    return (
+        <Grid3x3>
+            {carros.map((carro, index) => (
+                <Carro key={index} nome={carro.nome} imagemSrc={carro.imagemSrc}/>
+            ))}
+        </Grid3x3>
+    );
 }
 
 export default Home;

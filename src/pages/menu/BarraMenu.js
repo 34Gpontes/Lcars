@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 import logoSvg from '../../images/logo.svg';
@@ -14,6 +14,8 @@ const Navbar = styled.nav`
   display: flex;
   align-items: center;
   gap: 30px;
+  justify-content: space-between;
+
 `;
 
 const NavbarLeft = styled.div`
@@ -35,6 +37,10 @@ const Search = styled.input`
   width: 100%;
   border-radius: 8px;
   margin-right: 30px;
+  color: white;
+  &::placeholder {
+    color: white;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -47,11 +53,14 @@ const SearchContainer = styled.div`
     margin-left: -90px;
     cursor: pointer;
   }
+  
+  
 `;
 
 const Right = styled.div`
   display: flex;
   flex-direction: row;
+  margin-right: 24px;
 
   .icon {
     padding: 10px;
@@ -60,31 +69,31 @@ const Right = styled.div`
 `;
 
 function BarraMenu() {
-  return (
-    <Navbar>
-      <NavbarLeft>
-        <div className="logo">
-          <Link to="/">
-            <img className="icon" src={logoSvg} alt="Logo" />
-          </Link>
-        </div>
-      </NavbarLeft>
-      <Center>
-        <Search type="text" className="search" placeholder="Busque aqui" />
-        <SearchContainer>
-          <img src={searchIconSvg} className="search-icon" alt="Search" />
-        </SearchContainer>
-      </Center>
-      <Right>
-        <Link to="/profile">
-          <img src={userIconSvg} className="icon" alt="Profile" />
-        </Link>
-        <Link to="/shop">
-          <img src={shopIconSvg} className="icon" alt="Shop" />
-        </Link>
-      </Right>
-    </Navbar>
-  );
+    return (
+        <Navbar>
+            <NavbarLeft>
+                <div className="logo">
+                    <Link to="/">
+                        <img className="icon" src={logoSvg} alt="Logo"/>
+                    </Link>
+                </div>
+            </NavbarLeft>
+            <Center>
+                <Search type="text" className="search" placeholder="Busque aqui"/>
+                <SearchContainer>
+                    <img src={searchIconSvg} className="search-icon" alt="Search"/>
+                </SearchContainer>
+            </Center>
+            <Right>
+                <Link to="/profile">
+                    <img src={userIconSvg} className="icon" alt="Profile"/>
+                </Link>
+                <Link to="/shop">
+                    <img src={shopIconSvg} className="icon" alt="Shop"/>
+                </Link>
+            </Right>
+        </Navbar>
+    );
 }
 
 export default BarraMenu;
