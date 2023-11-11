@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inter'), local('Inter-Regular'), url('caminho-para-o-arquivo-da-fonte.woff2') format('woff2');
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
