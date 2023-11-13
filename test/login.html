@@ -1,0 +1,133 @@
+<style>
+    .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1366px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .username-input, .password-input {
+        background: #7E7E7E;
+        padding: 12px;
+        margin: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .username-input input, .password-input input {
+        width: 256px;
+        height: 32px;
+        border: none;
+        outline: none;
+        background: #7E7E7E;
+        color: white;
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    .username-input img, .password-input img {
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+    
+    .login-form button {
+        background: #FECA0E;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 12px;
+        margin: 12px;
+        cursor: pointer;
+        &:hover {
+            background: #D5AA00;
+            transition: 0.5s;
+        }
+        &:active {
+            background: #FECA0E;
+            transition: 0.5s;
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .forgot-password {
+        color: rgb(0, 0, 0, 50%);
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        padding: 12px;
+        padding-top: 0;
+        font-size: 16px;
+        &:hover {
+            text-decoration: underline;
+            transition: 0.5s;
+        }
+        &:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background: rgb(0, 0, 0, 50%);
+    }
+
+    .register {
+        color: rgb(0, 0, 0, 50%);
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        font-size: 16px;
+        &:hover {
+            text-decoration: underline;
+            transition: 0.5s;
+        }
+        &:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+</style>
+<div class="main-container">
+    <div class="container">
+
+        <form class="login-form" method="post">
+            <div class="username-input">
+                <img src="./username-icon.svg" alt="">
+                <input type="text" id="username" name="username" placeholder="Nome de usuário">
+                
+            </div>
+            <div class="password-input">
+                <img src="./password-icon.svg" alt="">
+                <input type="password" id="password" name="password" placeholder="Senha">
+            </div>
+            <button type="submit">Entrar</button>
+            <label class="forgot-password">Esqueceu sua senha</label>
+            <div class="line"></div>
+            <div class="register">Não possui uma conta? <a href="#">Registre-se</a></div>
+        </form>
+    </div>
+</div>

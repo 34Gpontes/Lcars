@@ -1,0 +1,140 @@
+<style>
+    .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container .container {
+        width: 100%;
+        max-width: 1366px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin: 8px 12px;
+        font-weight: bold;
+        color: #FECA0E;
+    }
+
+    .username-input,
+    .password-input,
+    .fullName-input,
+    .dob-input,
+    .email-input,
+    .cpf-input,
+    .phone-input,
+    .confirmPassword-input {
+        background: #7E7E7E;
+        padding: 6px;
+        margin: 12px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+
+    .username-input input,
+    .password-input input,
+    .fullName-input input,
+    .dob-input input,
+    .email-input input,
+    .cpf-input input,
+    .phone-input input,
+    .confirmPassword-input input {
+        width: 100%;
+        height: 32px;
+        border: none;
+        outline: none;
+        background: #7E7E7E;
+        color: white;
+    }
+
+    .input-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        height: 64px;
+
+    }
+
+    button {
+        background: #FECA0E;
+        color: white;
+        font-size: 24px;
+        border: none;
+        outline: none;
+        padding: 12px;
+        margin: 12px;
+        cursor: pointer;
+        &:hover {
+            background: #D5AA00;
+            transition: 0.5s;
+        }
+
+    }
+
+</style>
+
+<div class="main-container">
+    <div class="container">
+        <form class="login-form" method="post">
+            <div class="input-wrapper">
+                <div class="username-input">
+                    <label for="username">Nome de usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="fullName-input">
+                    <label for="fullName">Nome Completo:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+            </div>
+
+            <div class="dob-input">
+                <label for="dob">Data de Nascimento:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="email-input">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="cpf-input">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="123.456.789-09" required>
+            </div>
+
+            <div class="phone-input">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="(00) 12345-6789" required>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="password-input">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="confirmPassword-input">
+                    <label for="confirmPassword">Confirmar Senha:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+            </div>
+            
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>
