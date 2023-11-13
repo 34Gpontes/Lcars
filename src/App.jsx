@@ -7,7 +7,7 @@ import Register from './pages/register/Register'
 import Shop from './pages/shop/Shop'
 import BarraMenu from './pages/menu/BarraMenu';
 import Product from './pages/product/Product';
-import UnderConstruction from './pages/UnderConstruction/UnderConstruction';
+import UnderConstruction from './pages/underConstruction/UnderConstruction';
 
 function App() {
     return (
