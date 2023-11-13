@@ -1,0 +1,234 @@
+<link rel="stylesheet" href="reset.css">
+<style>
+    .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        max-width: 1366px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .right {
+        width: 50%;
+    }
+
+    .items {
+        width: 100%;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: row;
+        border-radius: 8px;
+        max-width: 816px;
+        height: 192px;
+        background: #7E7E7E;
+        margin: 25px
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 100%;
+    }
+
+    .description p {
+        color: white;
+    }
+
+    .square {
+        width: 90%;
+        max-width: 212px;
+        height: 128px;
+        background: rgba(0, 0, 0, 0.6);
+        margin-left: 24px;
+    }
+
+    .amount {
+        color: white;
+
+    }
+
+    .amount p {
+        margin: 0;
+    }
+
+    .count-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px
+    }
+
+    .count-container-left {
+        cursor: pointer;
+    }
+
+    .count-container-right {
+        cursor: pointer;
+    }
+
+    .services {
+        margin-top: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #7E7E7E;
+        width: 100%;
+        height: 256px;
+        
+        
+    }
+
+    .services .title {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 24px;
+        
+    }
+
+    .sub-items {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        color: white;
+        
+    }
+    .warranty {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .portage {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<div class="main-container">
+    <div class="container">
+        <div class="left">
+            <section class="items">
+                <div class="item">
+                    <section class="content">
+                        <div class="square"></div>
+                    </section>
+                    <section class="content">
+                        <div class="description">
+                            <p>Nome do Carro</p>
+                            <p>Ano</p>
+                            <p>Cor</p>
+                            <p>Chassis</p>
+                        </div>
+
+                    </section>
+                    <section class="content">
+                        <div class="amount">
+                            <p>Quantidade</p>
+                            <div class="count-container">
+                                <div class="count-container-left">
+                                    <img src="./material-symbols_arrow-left.svg" alt="">
+                                </div>
+                                <div class="count-container-center">
+                                    <p>1</p>
+                                </div>
+                                <div class="count-container-right">
+                                    <img src="./material-symbols_arrow-right.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="value">
+                            <p>Valor a vista</p>
+                            <p>R$ 30.000,00</p>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="item">
+                    <section class="content">
+                        <div class="square"></div>
+                    </section>
+                    <section class="content">
+                        <div class="description">
+                            <p>Nome do Carro</p>
+                            <p>Ano</p>
+                            <p>Cor</p>
+                            <p>Chassis</p>
+                        </div>
+
+                    </section>
+                    <section class="content">
+                        <div class="amount">
+                            <p>Quantidade</p>
+                            <div class="count-container">
+                                <div class="count-container-left">
+                                    <img src="./material-symbols_arrow-left.svg" alt="">
+                                </div>
+                                <div class="count-container-center">
+                                    <p>1</p>
+                                </div>
+                                <div class="count-container-right">
+                                    <img src="./material-symbols_arrow-right.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="value">
+                            <p>Valor a vista</p>
+                            <p>R$ 30.000,00</p>
+                        </div>
+
+                    </section>
+                </div>
+            </section>
+            <section class="services">
+                <div class="title">Serviços</div>
+
+                <div class="sub-items">
+                    <div class="warranty">
+                        <div class="warranty-title">Garantia Estendida</div>
+                    </div>
+    
+                    <div class="portage">
+                        <div class="warranty-title">Frete</div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+        <div class="right">
+            <div class="summary">
+                <div class="summary-title"></div>
+            </div>
+        </div>
+    </div>
+</div>
